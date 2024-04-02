@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remeselné spravocanie dreva</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <h1 >Remeselné Spracovanie Dreva</h1>
+        <nav>
+            <ul>
+                <li><a href="uvod.html">Úvod</a></li>
+                <li><a href="prace.html">Práce</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="ziadost.html">Žiadosť</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="form-heading">Objednávka</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Meno:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="query">Vaše požiadavky:</label>
+                    <textarea id="query" name="query" rows="6" required></textarea>
+                </div>
+                <div class="submitDiv">
+                    <button type="submit" class="submit-btn">Poslať objednávku</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "ssCjUlySUZV8MJU8-",
+        });
+    })();
+    </script>
+    <footer>
+        <p>&copy; 2024 Remeselné Spracovanie Dreva. All rights reserved.</p>
+    </footer>
+
+    <script src="java2.js"></script>
+ 
+</body>
+</html>
